@@ -1,4 +1,4 @@
-import pytest 
+import pytest
 from fastapi import status
 from starlette.testclient import TestClient
 
@@ -13,4 +13,4 @@ def client():
 def test_health_check(client):
     response = client.get("/api/health-check/")
     assert response.status_code == status.HTTP_200_OK
-    assert response.json() == {"message":"OK"}
+    assert response.json() == {"message": "OK"}
